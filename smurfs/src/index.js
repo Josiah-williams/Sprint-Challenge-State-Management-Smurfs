@@ -5,12 +5,11 @@ import App from './components/App'
 import thunk from 'redux-thunk'
 import { combineReducers, createStore, compose, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
-import { formReducer, smurfsReducer, Reducer } from './state/reducers'
+import   * as Reducer  from './state/reducers'
 
 // STEP-4 USE combineReducers FROM redux TO MAKE A SINGLE REDUCER
 const combinedReducer = combineReducers({
-    formValues: formReducer,
-    smurfs: smurfsReducer,
+    smurfs: Reducer.smurfsReducer
   })
 
   // STEP-5 USE createStore FROM redux TO MAKE A STATE STORE
